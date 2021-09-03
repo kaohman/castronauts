@@ -29,7 +29,6 @@ const Tracks = () => {
   const { loading, error, data } = useQuery(TRACKS);
 
   if (loading) return <QueryResult loading={loading} error={error} />;
-  if (error) return `Error ${error.message}`;
   return (
     <Layout grid>
       {data?.tracksForHome?.map(track => (
